@@ -22,7 +22,7 @@ I upload photos often, and they cover many subjects: street dogs, cats, clouds, 
 ## Results so far
 
 - **Phase 5 (v1 rules):** 44 real photos over four rounds. About 82% were right on the first pass. After each round's corrections became rules, all 44 matched. See `TESTING.md` for what these numbers do and do not show.
-- **v2.0:** In October 2026 I rebuilt the account from one catch-all board into keyword boards. A 30-pin check of the v2.0 rules scored 11 of 30 (37%) on the first pass. Several misses were pins the rules sent to a board but I placed in the catch-all section, so the next step is a clearer line between "board-worthy" and "random".
+- **v2.0:** In October 2026 I rebuilt the account from one catch-all board into keyword boards. A 30-pin check of the v2.0 rules scored 12 of 30 (40%) on the first pass. Several misses were pins the rules sent to a board but I placed in the catch-all section, so the next step is a clearer line between "board-worthy" and "random".
 - **v2.1:** Added boards for vehicles, night shots and textures, plus water and symmetry sections, and updated the rules to match. The next test is planned in `TESTING.md`.
 
 ## How to use it
