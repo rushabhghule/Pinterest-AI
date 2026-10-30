@@ -1,37 +1,38 @@
 # Repository Standards
 
-## Single Source of Truth
+## One job per file
 
-- BOARD.md stores board names and section names only.
-- RULES.md stores classification logic only.
-- MASTER_PROMPT.md stores the workflow prompt only.
-- README.md explains the repository.
+| File | Holds |
+|---|---|
+| `README.md` | What the project is and how to use it |
+| `BOARD.md` | Allowed destinations and the old-to-new section map |
+| `CLASSIFICATION_RULES.md` | The decision order and the rules |
+| `CONFUSION_PREVENTION.md` | Known traps, with the rule that fixes each one |
+| `WORKFLOW_PROMPT.md` | The prompt to give the AI and the output format |
+| `TESTING.md` | How the rules were tested and what the results mean |
+| `CHANGELOG.md` | What changed in each version |
 
----
+A fact lives in one file only. Other files link to it instead of repeating it.
 
-## Rule Writing Principles
+## Writing rules
 
 Every rule should:
 
-- Be based on real examples.
-- Be short and unambiguous.
-- Solve one specific problem.
-- Never duplicate another rule.
+- Come from a real photo.
+- Be short and have one meaning.
+- Solve one problem.
+- Not repeat or contradict another rule.
 
----
+## When to change a rule
 
-## Rule Updates
+Change or add a rule only when:
 
-Only add a new rule when:
+- The AI makes the same mistake more than once.
+- A board or section is added, renamed or removed.
+- A new kind of photo is not covered.
 
-- The AI makes a repeated mistake.
-- A new section is created.
-- The board organization changes.
+Every change gets a line in `CHANGELOG.md` and a version bump.
 
----
+## File names
 
-## Repository Philosophy
-
-The repository stores knowledge, not conversations.
-
-The goal is to improve the system over time instead of rewriting prompts.
+Use `UPPER_CASE.md` names so GitHub renders every file as Markdown.
