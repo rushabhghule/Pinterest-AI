@@ -1,315 +1,118 @@
-# Pinterest-AI Classification Rules
+# Classification Rules
 
-## Personal Rules (Phase 5 Final Clarifications)
+Single source of truth for **how** a pin is classified. Destination names come from `BOARD.md`.
 
-**CRITICAL PRINCIPLE:** Visual dominance > photographer intent. Subject always overrides surrounding context.
+Version: **v2.1 (30 Oct 2026)**
 
----
-
-### RULE 1: Animal Presence ALWAYS Overrides Human Presence
-
-**Principle:** Animal in frame + person in frame → Animal wins, full stop.
-
-**Cat Classification:**
-- Adult cat, any setting, any framing → **elgatooo**
-- Kitten (small, young), any setting → **smol frens**
-- Orange/ginger cat (adult or kitten) → **orange cats**
-- Cat with person in photo → **elgatooo** (animal overrides human)
-
-**Dog Classification:**
-- Adult dog, stray/street/unknown → **strays**
-- Adult dog, personal/known → **frens**
-- Puppy/young dog, any setting → **smol frens**
-- Dog with person in photo → strays or smol frens (animal overrides human)
-
-**Other Creatures (non-cat, non-dog):**
-- Young/small creatures → **smol frens** OR **creatures (sweet ones)**
-- Adult creatures (monkeys, goats, cattle, birds, etc.) → **creatures (sweet ones)**, NOT strays
-- Personal/known animal with emotional connection → **garja**
-
-**Critical Points:**
-- Cats ALWAYS go to elgatooo/orange cats, NEVER elsewhere
-- Small monkeys → creatures (sweet ones), NOT strays
-- Any animal with person present → animal wins; classify by animal type
-- Strays is DOG-SPECIFIC for unknown/street dogs
+**Core principle:** classify by the primary subject that is visible in the photo. The subject always overrides the setting around it. Do not guess why the photo was taken.
 
 ---
 
-### RULE 2: Subject Always Overrides Surrounding Context
+## Decision order
 
-**Principle:** The PRIMARY SUBJECT of the photograph determines classification, not the surrounding elements.
+Ask the questions in this order and stop at the first "yes". This is the only priority order in the repository. Every other file follows it.
 
-**Application:**
-- Motorcycle on street → **wheels** (motorcycle is the subject)
-- Flowers in garden with trees → **another luvv** (flowers are subject)
-- Building with tree framing → **pretty bricks** (architecture is subject)
-- Dog on beach → **strays** (dog is subject, beach is context)
-- Person in doorway → **composition** (compositional framing is primary, person is element)
+| Step | Question | If yes → destination |
+|---|---|---|
+| 1 | Is the primary subject an **animal**? | Dog → **Street Dog Photography**. Cat → **Cat Photography**. Any other animal → main board / **creatures (sweet ones)** |
+| 2 | Is a **vehicle** the primary subject? | **Bike & Car Photography** |
+| 3 | Is **night or darkness** the defining look? | **Night Photography** |
+| 4 | Is a **road, path or street scene** the primary context? | **Street & Architecture Photography** |
+| 5 | Is a **screen, device or displayed media** shown? | Main board / **Randoms** |
+| 6 | Is the subject an **idol, deity sculpture, statue or figurine**? | **Idols and Statues** |
+| 7 | Is a **person** the clear portrait subject? | Main board / **Randoms** |
+| 8 | Is a **flowering bloom** the primary subject? | **Flower Photography** |
+| 9 | Are **clouds, sky or a sunset** visually dominant? | **Sky, Cloud & Sunset Photography** |
+| 10 | Is **food** the subject? | Main board / **अन्न 🍴** |
+| 11 | Is **water** the subject? | Main board / **Water** |
+| 12 | Is a **close-up surface or texture** the subject? | **Texture Photography** |
+| 13 | Is a **fruit, crop, plant, tree or landscape** the primary subject? | **Nature Photography** |
+| 14 | Is the photo built on **symmetry or one isolated subject**? | Main board / **Symmetry and Isolation** |
+| 15 | Is **architecture** dominant, or are people small elements in a built scene? | **Street & Architecture Photography** |
+| 16 | Nothing above fits | Main board / **Randoms** |
 
-**Path Exception (Partial Override):**
-- Road/street must be VISIBLE and RECOGNIZABLE as the subject/context
-- Road visible as background or minor element → does NOT automatically = paths
-- Road is PRIMARY context AND visible → **paths** (road takes priority only when dominant)
-
-**Example Clarifications:**
-- Motorcycle in clear street focus → **wheels** (subject overrides street context)
-- Car on invisible/implicit street → **wheels** (subject)
-- Street with parked cars as elements → **paths** (street is subject/primary context)
-
----
-
-### RULE 3: Flowers vs Fruits/Crops — Clear Distinction
-
-**Principle:** Flowering blooms belong to "another luvv". Fruits, crops, vegetables, and ALL other nature/botanical subjects belong to "just Earth".
-
-**Flowers → another luvv:**
-- Flowering blooms (rose, tulip, jasmine, etc.)
-- Flower arrangements
-- Flowering plants in bloom
-- Blooming trees
-
-**Fruits/Crops/Nature → just Earth:**
-- Seed pods, fruiting stages
-- Custard apples, mangoes, fruit clusters
-- Agricultural/crop photographs
-- Vegetables growing
-- Botanical/nature photography (non-flowering)
-- Trees, plants, leaves (all non-flowering botanical)
-
-**Examples:**
-- Rose blooms → another luvv
-- Rose hips (seed pods) → just Earth
-- Flowering tree → another luvv
-- Fruiting tree → just Earth
-- Vegetable garden → just Earth
-- Close-up botanical detail → just Earth (unless it's a flowering bloom)
+**fav bangers** is never assigned by the AI. The owner adds pins there by hand.
 
 ---
 
-### RULE 4: Structural vs. Sculptural Religious Elements
+## Rule 1: Animals always win
 
-**Principle:** Do NOT associate building's religious purpose with portraits/idols. Only actual religious IDOLS/sculptures belong there.
+An animal that is the primary subject overrides people, places and everything else. Classify by species.
 
-**Structural Religious Buildings → pretty bricks:**
-- Temples (as buildings)
-- Cathedrals (as buildings)
-- Churches (as buildings)
-- Mosque structures
-- Religious buildings, regardless of spiritual significance
+| Animal | Destination |
+|---|---|
+| Any dog: street dog, known dog, puppy | Street Dog Photography |
+| Any cat: adult, kitten, orange cat | Cat Photography |
+| Any other animal: monkeys, cattle, goats, birds, camels | Main board / creatures (sweet ones) |
 
-**Sculptural Religious Elements → portraits/idols:**
-- Religious idols, statues, deity sculptures
-- Ornamental religious sculptures
-- Statues of spiritual/religious figures
+- A dog or cat held by a person still goes to the dog or cat board.
+- Age never changes the destination. Kittens go with cats and puppies go with dogs.
+- A small animal in a wider scene (a dog asleep outside a shop, cattle far off in a field) is not the primary subject. Classify by the scene.
 
-**Critical Distinction:**
-- Cathedral = architecture (pretty bricks)
-- Deity statue = icon (portraits/idols)
-- Religion context does NOT move architecture to portraits/idols
+## Rule 2: Subject overrides context
 
----
+The thing being photographed decides the destination, not the place it is in.
 
-### RULE 5: Composition — Wide Definition
+- Dog on a beach → Street Dog Photography
+- Motorcycle in a parking garage → Bike & Car Photography
+- Flowers in a garden with trees → Flower Photography
+- Building framed by a tree → Street & Architecture Photography
 
-**Principle:** Composition captures any photo where VISUAL ARRANGEMENT and STRUCTURE are primary.
+## Rule 3: Vehicles (new destination in v2.1)
 
-**Includes:**
-- Intentional visual framing and layering
-- Artistic arrangement of elements (plants + lights, mirrors + furniture, etc.)
-- Photographs where PEOPLE are compositional elements (figures in landscape/beach studies, person in doorway frame)
-- Visual structure and geometric harmony
-- Designed/curated visual moments
-- Styled/arranged scenes where composition is emphasized
-- Minimalist compositions with figures as elements
+A motorcycle, car, bicycle, bus or truck as the primary subject → Bike & Car Photography, day or night. A road with traffic far away is a road photo (Step 4), not a vehicle photo.
 
-**Does NOT Require:**
-- Conscious photographic technique
-- Specific visual method
-- Professional composition rules
+## Rule 4: Night (new in v2.1)
 
-**Scope:** WIDE — holds diverse compositional approaches
+Use Night Photography when darkness is what makes the photo: lit petrol pumps, bonfires, moonlit skies, streets after dark. An animal or vehicle shot at night still follows Steps 1 and 2. A sunset with light still in the sky is Sky, Cloud & Sunset.
 
----
+## Rule 5: Flowers vs the rest of nature
 
-### RULE 6: Roads/Paths Take Priority — But Subject Overrides
+| Subject | Destination |
+|---|---|
+| Flowering blooms, flower arrangements, flower rangoli, plants in bloom | Flower Photography |
+| Seed pods, fruits, crops, leaves, non-flowering plants and trees | Nature Photography |
 
-**Principle:** Road/street must be VISIBLE and RECOGNIZABLE as PRIMARY context or subject.
+## Rule 6: Religious buildings vs idols
 
-**Application:**
-- Road visible as dominant context + multiple elements → **paths**
-- Vehicle on street (vehicle is main subject) → **wheels**
-- Street with parked cars → **paths** (street is context)
-- Motorcycle/bike on street (bike is subject) → **wheels** (subject overrides)
-- Path with landscape → **paths** (path is primary)
-- Person on recognizable road → **composition** or **portraits/idols** (subject type matters)
+- A temple, church, mosque or cathedral as a building → Street & Architecture Photography.
+- An idol, deity sculpture, statue or clay figurine → Idols and Statues.
 
-**Clarification:**
-- Road must be VISIBLE and RECOGNIZABLE
-- Road visible as background element only → does NOT automatically = paths
-- When subject is CLEARLY PRIMARY → subject section wins (wheels for vehicles, etc.)
-- When road/street is PRIMARY CONTEXT → paths wins
+## Rule 7: People
 
----
+- A person as the clear portrait subject → Randoms.
+- A person as a small element in a built scene → Street & Architecture Photography.
 
-### RULE 7: Trees/Plants Only = Just Earth If Dominant Visual Focus
+## Rule 8: Screens and displayed media
 
-**Principle:** Trees and plants are NOT automatically "just Earth." Only when they are PRIMARY visual subject.
+Phones, watches, monitors, TVs, book covers held in hand and paintings on display → Randoms, whatever they show. (In v2.0 these went to a "random" section, which no longer exists.)
 
-**Application:**
-- Tree canopy as primary subject → **just Earth**
-- Tree as framing device with road present → **paths** (if road is primary)
-- Trees + architecture equally prominent → classify by dominant element
-- Forested landscape → **just Earth**
-- Tree in background, vehicle on street → **wheels** (vehicle is subject)
+## Rule 9: Water (changed in v2.1)
+
+Water as the subject (sea, lake, pool, river) → main board / Water. This includes older water pins that used to sit on Nature Photography.
+
+## Rule 10: Textures (changed in v2.1)
+
+A close-up surface → Texture Photography, whether natural (stone, bark, soil, cracked earth, piles of produce) or man-made (brick, walls, tiles). A whole wall or building seen from a distance is architecture, not texture.
+
+## Rule 11: Symmetry and isolation (new section in v2.1)
+
+A photo built on symmetry, or on one subject isolated against a plain background → Symmetry and Isolation. Other composition (framing, layering, people as small elements) → Street & Architecture Photography.
+
+## Rule 12: Food
+
+Food as the subject, including harvested produce in bowls or packets → अन्न 🍴. Produce still growing on a plant or in a field → Nature Photography.
 
 ---
 
-### RULE 8: Screens/Devices Always = Random
+## Changes in v2.1
 
-**Principle:** Photos of phones, screens, monitors, displays → **random**, regardless of content shown.
-
-**Examples:**
-- Book cover in hands → random
-- Gallery painting displayed → random
-- Phone screen shown → random
-- Monitor display → random
-
----
-
-### RULE 9: Clouds ALWAYS Override Everything (When Dominant)
-
-**Principle:** Prominent cloud presence overrides all other elements.
-
-**Application:**
-- Clouds visually prominent → **weolcan**
-- Does NOT go to "after sun sets" (lighting)
-- Does NOT go to landscape
-- Clouds must fill/dominate frame → weolcan, period
-
----
-
-## Global Classification Principles
-
-**One Image, One Section**
-Every image belongs to exactly one primary section. If multiple sections could work, use the priority hierarchy below.
-
-**Priority Hierarchy (Absolute Order):**
-
-1. **SUBJECT TYPE** (animal → classify by animal type)
-2. **Road/Path** (if road is PRIMARY context/subject, not just visible)
-3. **Screens/Devices** (ANY screen shown)
-4. **People/Idols** (if person/idol is subject, not compositional element)
-5. **Animals** (if subject is animal, by type and age/size)
-6. **Clouds** (if clouds are visually dominant)
-7. **Food** (if food is subject)
-8. **Water** (if water is important/visible/subject)
-9. **Flowers** (if flowering blooms are subject)
-10. **Vehicles** (wheels — if vehicle is primary subject)
-11. **Fruits/Nature** (just Earth — all non-flowering botanical/nature)
-12. **Trees/Plants** (just Earth — if dominant visual focus)
-13. **Visual Structure** (composition — if arrangement is primary)
-14. **Lighting** (after sun sets, weolcan — if lighting is primary)
-15. **Architecture** (pretty bricks — if structure is dominant)
-16. **Fallback** (random)
-
-**Key Rule:** Subject always overrides surrounding context. If you're uncertain, ask: "What is the PRIMARY SUBJECT of this photo?" Classify by that.
-
----
-
-## What Changed (Round 4 Clarifications)
-
-| Issue | Previous | Updated | Change |
-|-------|----------|---------|--------|
-| Path priority | Road visible = paths always | Road visible BUT subject overrides | Subject-first approach |
-| Fruit classification | Mixed with flowers | Fruits → just Earth only | Clearer botanical distinction |
-| Wheels section | Unclear when it activates | Wheels when vehicle is primary subject | Subject determines, not context |
-| Surrounding context | Sometimes affected classification | Subject always overrides surrounding | Core principle clarified |
-
----
-
-## Decision Tree (Updated)
-
-```
-START: What is the PRIMARY SUBJECT of this photo?
-
-↓
-
-Q1: Is the primary SUBJECT an ANIMAL?
-├─ YES → animal type/age matters (elgatooo, strays, creatures, etc.)
-├─ NO → Q2
-
-Q2: Is a ROAD/PATH RECOGNIZABLE as primary context?
-├─ YES → paths
-├─ NO → Q3
-
-Q3: Is a SCREEN/DEVICE shown?
-├─ YES → random
-├─ NO → Q4
-
-Q4: Is the SUBJECT a PERSON or IDOL?
-├─ YES → portraits/idols
-├─ NO → Q5 (but person as compositional element → composition)
-
-Q5: Is the PRIMARY SUBJECT a FLOWERING BLOOM?
-├─ YES → another luvv
-├─ NO → Q6
-
-Q6: Are CLOUDS visually dominant?
-├─ YES → weolcan
-├─ NO → Q7
-
-Q7: Is FOOD the subject?
-├─ YES → अन्न
-├─ NO → Q8
-
-Q8: Is WATER important/visible/subject?
-├─ YES → water
-├─ NO → Q9
-
-Q9: Is the PRIMARY SUBJECT a VEHICLE/WHEELS?
-├─ YES → wheels
-├─ NO → Q10
-
-Q10: Is NATURE/BOTANICAL/FRUIT the primary subject?
-├─ YES → just Earth
-├─ NO → Q11
-
-Q11: Are TREES/PLANTS dominant visual focus?
-├─ YES → just Earth
-├─ NO → Q12
-
-Q12: Is VISUAL ARRANGEMENT/STRUCTURE primary?
-├─ YES → composition
-├─ NO → Q13
-
-Q13: Is LIGHTING the primary subject?
-├─ YES → after sun sets or weolcan
-├─ NO → Q14
-
-Q14: Is ARCHITECTURE dominant?
-├─ YES → pretty bricks
-├─ NO → random (fallback)
-```
-
-**KEY:** At each step, identify the PRIMARY SUBJECT, not the context or surrounding elements. Subject wins.
-
----
-
-## Important Notes for Implementation
-
-**Subject-First Approach:**
-- Always ask: "What am I photographing?" not "Where is it?"
-- Context supports classification but never overrides subject
-- A vehicle on a street is photographing THE VEHICLE (wheels), not the street
-- A person in a doorway is composing THE FRAME (composition), not portraying the person
-
-**Testing Against These Rules:**
-- Round 1-3: 100% accuracy after clarifications
-- Round 4: 100% accuracy with subject-first approach
-- Core principle is sound: subject overrides context
-
-**Continuous Improvement:**
-- Test every new photo category
-- Document edge cases
-- Refine definitions as patterns emerge
-- Subject priority remains constant
+| Area | v2.0 | v2.1 |
+|---|---|---|
+| Vehicles | Street & Architecture | Bike & Car Photography |
+| Night shots | Sky, Cloud & Sunset (night skies) | Night Photography |
+| Textures | Nature or Street & Architecture | Texture Photography |
+| Water | Nature Photography | Main board / Water |
+| Symmetry and isolated subjects | Street & Architecture | Main board / Symmetry and Isolation |
+| Screens and devices | "random" section | Randoms |
+| Steps | 15 | 16 |
