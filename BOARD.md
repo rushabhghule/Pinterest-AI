@@ -48,14 +48,11 @@ The AI may only use the destinations in this table. Never invent a board or sect
 | Cat Photography | Mobile photos of cats from the streets of India — orange cats, kittens and everyday cat moments. |
 | Bike & Car Photography | Mobile photos of motorcycles, cars, bicycles and buses from India — rides parked, on the road and around the city. |
 | Night Photography | Mobile night photography from India — city lights, bonfires, moonlit skies and streets after dark. |
-| Sky, Cloud & Sunset Photography | Mobile photos of clouds, skies and sunsets from India — monsoon clouds, golden hour and after-dark skies. |
+| Sky, Cloud & Sunset Photography | Mobile photos of clouds, skies and sunsets from India — monsoon clouds, blue skies and golden hour. |
 | Flower Photography | Mobile flower photography from India — marigolds, jasmine and everyday blooms up close. |
 | Texture Photography | Mobile texture photography from India — stone, brick, bark, soil and everyday surfaces up close. |
-| Nature Photography | Mobile nature photography from India — trees, forest trails, greenery, lakes and water. |
-| Street & Architecture Photography | Mobile street and architecture photography from India — old buildings, symmetry, paths, bikes and city details. |
+| Nature Photography | MobileMobile nature photography from India — trees, forest trails, greenery, fields and landscapes.treet & Architecture Photography | Mobile street and architecture photography from India — old buildings, temples, paths, graffiti and city details. |
 | Idols and Statues | Mobile photos of idols, deity sculptures and statues from India — Ganesh idols, temple figures and festival art. |
-
-Note: the Sky, Nature and Street & Architecture descriptions still mention after-dark skies, lakes and water, symmetry and bikes, which now have their own destinations. Update them on Pinterest when convenient.
 
 ---
 
